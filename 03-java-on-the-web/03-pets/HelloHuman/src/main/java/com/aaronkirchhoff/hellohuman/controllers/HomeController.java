@@ -13,10 +13,5 @@ public class HomeController {
 		return "index.jsp";
 	}
 	
-//	@RequestMapping("/")
-//	public String meeee() {
-//		return "index.jsp";
-//	}
-	
 
 }
