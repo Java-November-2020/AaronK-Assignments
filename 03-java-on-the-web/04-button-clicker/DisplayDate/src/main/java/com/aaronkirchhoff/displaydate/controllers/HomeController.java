@@ -1,7 +1,9 @@
 package com.aaronkirchhoff.displaydate.controllers;
 
+import java.util.Date;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +21,12 @@ public class HomeController {
 	@RequestMapping("/date")
 	public String date(Model model) {
 		LocalDate myDate = LocalDate.now();
-		model.addAttribute("myDate", myDate);
+		DateTimeFormatter formatted = DateTimeFormatter.ofPattern("eeee-d-MMMM-y");
+		formatted.format(myDate);
+		String mydate2 = formatted.format(myDate);
+
+		System.out.println(formatted.format(myDate));
+		model.addAttribute("myDate", mydate2);
 		return "date.jsp";		
 	}
 //	ok the method above, date, is passing a parameter we can call in our view file. on line 20, 
@@ -32,7 +39,12 @@ public class HomeController {
 	@RequestMapping("/time")
 	public String time(Model model) {
 		LocalTime myTime = LocalTime.now();
-		model.addAttribute("myTime", myTime);
+		DateTimeFormatter formatted = DateTimeFormatter.ofPattern("h:m a");
+		formatted.format(myTime);
+		String mytime2 = formatted.format(myTime);
+
+		System.out.println(formatted.format(myTime));
+		model.addAttribute("myTime", mytime2);
 		return "time.jsp";		
 	}
 
