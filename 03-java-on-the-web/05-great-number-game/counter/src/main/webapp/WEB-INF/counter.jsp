@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>counter assignment</title>
+<title>what's the count?</title>
 <link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="/webjars/bootstrap/4.5.2/css/bootstrap.min.css" />
     <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
@@ -15,9 +15,8 @@
 </head>
 <body>
 	<div class="text-center">
-		<h1 class="jumbotron" >Thanks for visiting my page!</h1>
-		<button onclick="window.location.href='/counter';" type="button" class="btn btn-primary">Number of visits?</button>
-		
+		<h1 class="display-3" >You have visited: ${count } times</h1>
+		<a href="/"> Back to home page.</a>
 	</div>
 </body>
 </html>

@@ -10,15 +10,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class CounterController {
 	
-	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String index(HttpSession session, Model viewModel) {
-		if(session.getAttribute("userCounter") == null) {
-			session.setAttribute("userCounter", 0);
+	@RequestMapping("/")
+	public String Index(HttpSession session) {
+		Integer count = (Integer) session.getAttribute("count");
+		if(count == null) {
+			session.setAttribute("count", 1);
 		}
-		
-		viewModel.addAttribute("viewCounter", session.getAttribute("userCounter"));
-		System.out.println("viewCounter");
+		else {
+			count++;
+			session.setAttribute("count", count);
+		}
 		return "index.jsp";
+	}
+	
+	@RequestMapping("/counter")
+	public String counter() {
+		return "counter.jsp";
 	}
 
 }
