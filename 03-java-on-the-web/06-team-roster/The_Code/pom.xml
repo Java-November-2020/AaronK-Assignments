@@ -8,10 +8,10 @@
 		<version>2.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.aaronkirchhoff.counter</groupId>
-	<artifactId>counter</artifactId>
+	<groupId>com.aaronkirchhoff.thecode</groupId>
+	<artifactId>The_Code</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>counter</name>
+	<name>The_Code</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -35,7 +35,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- ... -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
