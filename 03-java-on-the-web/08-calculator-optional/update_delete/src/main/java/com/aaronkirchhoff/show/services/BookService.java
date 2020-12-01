@@ -1,7 +1,8 @@
 package com.aaronkirchhoff.show.services;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.ArrayList;
+
+//import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -46,8 +47,8 @@ public class BookService {
 	}
 
 //	update/ edit an entry
-	public Book updateBook(Book book) {
-		return this.sRepo.save(book);
+	public Book updateBook(Long id, Book book) {
+        return this.sRepo.save(book);
 
 	}
 
